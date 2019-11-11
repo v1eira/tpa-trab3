@@ -1,3 +1,8 @@
+/*
+UVa 10107
+Autores: Ewerson Vieira Nascimento e Icaro Gavazza
+*/
+
 import java.util.Scanner;
 import java.util.Collections;
 import java.util.ArrayList;

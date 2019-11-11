@@ -1,3 +1,8 @@
+/*
+UVa 11581
+Autores: Ewerson Vieira Nascimento e Icaro Gavazza
+*/
+
 import java.util.Scanner;
 
 public class Main {

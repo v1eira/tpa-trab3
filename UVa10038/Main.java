@@ -1,3 +1,8 @@
+/*
+UVa 10038
+Autores: Ewerson Vieira Nascimento e Icaro Gavazza
+*/
+
 import java.util.Scanner;
 import java.util.List;
 import java.util.Arrays;

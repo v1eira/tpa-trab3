@@ -1,3 +1,8 @@
+/*
+UVa 12247
+Autores: Ewerson Vieira Nascimento e Icaro Gavazza
+*/
+
 import java.util.Scanner;
 import java.util.Arrays;
 
