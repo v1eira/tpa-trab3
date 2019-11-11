@@ -1,27 +1,33 @@
-import java.util.*;
 
-class Main {
-	public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int K = scan.nextInt();
-        int L = scan.nextInt();
-		while (K !=0 && L != 0) {
-            int cont = 0;
-			Set<Integer> conjunto = new HashSet<Integer>();
-			for (int i = 0; i < K; i++) {
-                int k_cd = scan.nextInt();
-				conjunto.add(k_cd);
-			}
-			for (int i = 0; i < L; i++) {
-                    int l_cd = scan.nextInt();
-				if (conjunto.contains(l_cd)) {
-					cont = cont+1;
-				}
-			}
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner read = new Scanner(System.in);
+
+        int N = read.nextInt();
+        int M = read.nextInt();
+        int both = 0;
+
+        while (N + M != 0) {
+            int[] jack = new int[N];
+            both = 0;
+
+            for (int i = 0; i < N; i++)
+                jack[i] = read.nextInt();
+
+            for (int i = 0; i < M; i++) {
+                if (Arrays.binarySearch(jack, read.nextInt()) >= 0)
+                    both += 1;
+            }
+
+            System.out.println(both);
             
-            System.out.println(cont);
-            K = scan.nextInt();
-            L = scan.nextInt();
-		}
-	}
+            N = read.nextInt();
+            M = read.nextInt();
+        }
+        
+        read.close();
+    }
 }
