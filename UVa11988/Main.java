@@ -1,3 +1,8 @@
+/*
+UVa 11988
+Autores: Ewerson Vieira Nascimento e Icaro Gavazza
+*/
+
 import java.util.*;
 
 public class Main {
