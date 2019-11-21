@@ -1,3 +1,8 @@
+#
+# UVa 01062
+# Autores: Ewerson Vieira Nascimento e Icaro Gavazza
+#
+
 def main():
     pilhas = []
     line = getline()
