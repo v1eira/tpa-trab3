@@ -16,13 +16,15 @@ def main():
         fragment, output = "", ""
         size, minSize, maxSize = 0, 0, 0
 
-        if i > 0:
-            print()
+
         
         fragment = input()
         while fragment != "":
             fragments.append(fragment)
-            fragment = input()
+            try:
+                fragment = input()
+            except:
+                break
         
         maxSize = minSize = len(fragments[0])
         for j in range(len(fragments)):
@@ -45,8 +47,10 @@ def main():
                             solutions[output] += 1
                         else:
                             solutions[output] = 1
-        
-        print(max(solutions.items(), key=operator.itemgetter(1))[0])
 
+
+        print(max(solutions.items(), key=operator.itemgetter(1))[0])
+        if i < testCases-1:
+            print()
 
 main()
