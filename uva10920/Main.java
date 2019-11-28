@@ -10,6 +10,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
         long SZ, P;
+        int line, column;
 
         for (;;) {
             SZ = read.nextLong();
@@ -45,7 +46,11 @@ public class Main {
                         break;
                 }
             }
-            System.out.printf("Line = %d, column = %d.\n", (int) (i + (SZ / 2) + 1), (int) (j + (SZ / 2) + 1));
+            
+            line = (int) (i + (SZ / 2) + 1);
+            column = (int) (j + (SZ / 2) + 1);
+            
+            System.out.printf("Line = %d, column = %d.\n", line, column);
         }
         read.close();
     }
