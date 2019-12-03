@@ -1,3 +1,8 @@
+#
+# UVa 10901 - Ferry Loading III
+# Autores: Ewerson Vieira Nascimento e Icaro Gavazza
+#
+
 import math
 RIGHT = False
 LEFT = True
