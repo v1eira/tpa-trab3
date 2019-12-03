@@ -23,9 +23,9 @@ def main():
             carro = input().split()
             carro[0] = int(carro[0])
             if carro[1] == 'left':
-                fila_left.append(carro[0])
+                fila_left.append([i,carro[0]])
             else:
-                fila_right.append(carro[0])
+                fila_right.append([i,carro[0]])
 
         proximo_carro = 0
 
@@ -42,28 +42,32 @@ def main():
                 fila_atual = fila_right
                 fila_outra = fila_left
 
-            while balca < n and len(fila_atual) != 0 and fila_atual[0] <= tempoTot:
-                fila_atual[0] = t + tempoTot
+            while balca < n and len(fila_atual) != 0 and fila_atual[0][1] <= tempoTot:
+                fila_atual[0][1] = t + tempoTot
                 resposta.append((fila_atual[0]))
                 balca += 1
                 fila_atual.pop(0)
 
-            if balca != 0 or (len(fila_outra) != 0 and fila_outra[0] <= tempoTot):
+            if balca != 0 or (len(fila_outra) != 0 and fila_outra[0][1] <= tempoTot):
                 tempoTot += t
                 posicao = not posicao
             else:
-                if len(fila_atual) == 0 or (len(fila_outra) > 0 and fila_outra[0] < fila_atual[0]):
-                    tempoTot = fila_outra[0] + t
+                if len(fila_atual) == 0 or (len(fila_outra) > 0 and fila_outra[0][1] < fila_atual[0][1]):
+                    tempoTot = fila_outra[0][1] + t
                     posicao = not posicao
                 else:
-                    tempoTot = fila_atual[0]
+                    tempoTot = fila_atual[0][1]
 
 
-
+        resposta.sort(key = sorte)
         for tmp in resposta:
-            print(tmp)
+            print(tmp[1])
         resposta = []
         print()
+
+
+def sorte(val):
+    return val[0]
 
 
 main()
