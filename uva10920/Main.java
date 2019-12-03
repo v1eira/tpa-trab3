@@ -1,5 +1,5 @@
 /*
-UVa 10920 - Spiral Trap
+UVa 10920 - Spiral Tap
 Autores: Ewerson Vieira Nascimento e Icaro Gavazza
 */
 
